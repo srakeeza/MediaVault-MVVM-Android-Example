@@ -1,4 +1,4 @@
-package com.example.mediavault.adapter
+package com.example.mediavault.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

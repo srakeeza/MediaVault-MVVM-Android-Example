@@ -1,13 +1,14 @@
-package com.example.mediavault
+package com.example.mediavault.view
 
-import android.os.Bundle
+import android.Manifest
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
+import android.os.Bundle
 import android.provider.Settings
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import com.example.mediavault.adapter.MediaAdapter
+import com.example.mediavault.view.MediaAdapter
 import com.example.mediavault.databinding.ActivityMainBinding
 import com.example.mediavault.utils.PermissionManager
 import com.example.mediavault.viewmodel.MediaViewModel
@@ -94,9 +95,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkPhotoPermissionAndLoad() {
         val permission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            android.Manifest.permission.READ_MEDIA_IMAGES
+            Manifest.permission.READ_MEDIA_IMAGES
         } else {
-            android.Manifest.permission.READ_EXTERNAL_STORAGE
+            Manifest.permission.READ_EXTERNAL_STORAGE
         }
 
         permissionManager.requestPermission(
@@ -109,9 +110,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkVideoPermissionAndLoad() {
         val permission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            android.Manifest.permission.READ_MEDIA_VIDEO
+            Manifest.permission.READ_MEDIA_VIDEO
         } else {
-            android.Manifest.permission.READ_EXTERNAL_STORAGE
+            Manifest.permission.READ_EXTERNAL_STORAGE
         }
 
         permissionManager.requestPermission(
