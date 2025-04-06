@@ -1,4 +1,4 @@
-### MediaVault: Android Media Gallery App Documentation
+### MediaVault: MediaVault-MVVM-Android-Example
 
 ## Project Overview
 
