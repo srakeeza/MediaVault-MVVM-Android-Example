@@ -1,0 +1,6 @@
+graph TD;
+    A["View (MainActivity, MediaAdapter)"]-->|"Observes LiveData<br>Handles UI Events"|B["ViewModel (MediaViewModel)"]
+    B-->|"Requests Data<br>Returns LiveData"|C["Repository (MediaRepository)"]
+    C-->|"Creates/Returns"|D["Model (MediaItem)"]
+    C-->|"Queries"|E["MediaStore ContentProvider"]
+    F["PermissionManager"]-->|"Manages Permissions"|A

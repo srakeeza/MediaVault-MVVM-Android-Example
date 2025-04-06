@@ -1,0 +1,16 @@
+graph TD;
+    A["App Launch"] --> B["MainActivity loads"]
+    B --> C["Photos tab selected by default"]
+    C --> D["Permission check"]
+    D -->|"Permission granted"| E["Load and display photos"]
+    D -->|"Permission denied"| F["Show permission dialog"]
+    F -->|"Grant permission"| E
+    F -->|"Deny permission"| G["Show rationale or settings dialog"]
+    
+    H["User taps Videos tab"] --> I["Permission check for videos"]
+    I -->|"Permission granted"| J["Load and display videos"]
+    I -->|"Permission denied"| K["Show permission dialog"]
+    K -->|"Grant permission"| J
+    K -->|"Deny permission"| L["Show rationale or settings dialog"]
+    
+    M["User returns to Photos tab"] --> N["Display cached photos or reload"]
